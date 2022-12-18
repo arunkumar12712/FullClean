@@ -10,8 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
 
-builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddApplicationCore();
+builder.Services.AddInfrastructure(builder.Configuration).AddApplicationCore();
+
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(
     options => options.SignIn.RequireConfirmedAccount = true)
