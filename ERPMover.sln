@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A5F8CD25-6667-4569-9508-88A0CA7A2FA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quotation.WebAPI", "Quatation.WebAPI\Quotation.WebAPI.csproj", "{7441B21E-C2A1-49E3-8611-A027A10DED1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quotation.WebAPI", "Quotation.WebAPI\Quotation.WebAPI.csproj", "{7441B21E-C2A1-49E3-8611-A027A10DED1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quotation.Domain", "Quotation.Domain\Quotation.Domain.csproj", "{7457D05E-1AE6-4066-9BA2-1A3B6A03EB62}"
 EndProject
