@@ -4,6 +4,7 @@ using Quotation.Application.DTO;
 using Quotation.Application.Interface;
 using Quotation.Application.Services;
 using Quotation.Domain.Entities;
+using System.Net;
 
 namespace Quotation.WebAPI.Controllers
 {
@@ -60,14 +61,14 @@ namespace Quotation.WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpDelete]
-        [Route("Delete")]
+       
+        [HttpDelete("{id}")]
         public IActionResult DeleteUnit(int id)
         {
             var result = _unitService.DeleteUnit(id);
             if (result)
             {
-                return new BadRequestObjectResult(new  { Message = "Delete Successfully" });
+                return new BadRequestObjectResult(new { Message = " Delete Successfully " });
             }
             return NotFound();
         }

@@ -29,8 +29,7 @@ namespace Quotation.Infrastructure.Repository
         public void DeleteUnitById(Unit unit)
         {
              _quotationDbContext.Remove(unit);
-            //unit.State = EntityState.Deleted;
-            _quotationDbContext.SaveChanges();
+             _quotationDbContext.SaveChanges();
         }
 
         public List<Unit> GetAllUnits()
