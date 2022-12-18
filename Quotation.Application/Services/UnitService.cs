@@ -32,6 +32,7 @@ namespace Quotation.Application.Services
             var result = _unitRepository.GetUnitById(id);
             if(result == null)
             {
+                // tesing
                 return false;
             }
             _unitRepository.DeleteUnitById(result);
