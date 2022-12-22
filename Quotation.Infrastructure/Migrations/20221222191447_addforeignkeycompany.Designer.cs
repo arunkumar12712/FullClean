@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quotation.Infrastructure.Data;
 
@@ -11,9 +12,10 @@ using Quotation.Infrastructure.Data;
 namespace Quotation.Infrastructure.Migrations
 {
     [DbContext(typeof(QuotationDbContext))]
-    partial class QuotationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221222191447_addforeignkeycompany")]
+    partial class addforeignkeycompany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -237,53 +239,6 @@ namespace Quotation.Infrastructure.Migrations
                     b.ToTable("Cities");
                 });
 
-            modelBuilder.Entity("Quotation.Domain.Entities.Company", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Address1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Address2")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CityId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ContactNo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GSTNo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("StateId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CityId");
-
-                    b.HasIndex("StateId");
-
-                    b.ToTable("Companys");
-                });
-
             modelBuilder.Entity("Quotation.Domain.Entities.State", b =>
                 {
                     b.Property<int>("Id")
@@ -371,25 +326,6 @@ namespace Quotation.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Quotation.Domain.Entities.Company", b =>
-                {
-                    b.HasOne("Quotation.Domain.Entities.City", "City")
-                        .WithMany()
-                        .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Quotation.Domain.Entities.State", "State")
-                        .WithMany()
-                        .HasForeignKey("StateId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("City");
-
-                    b.Navigation("State");
                 });
 #pragma warning restore 612, 618
         }
