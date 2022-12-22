@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Quotation.Application.Configuration;
 using Quotation.Infrastructure.Configuration;
 using Quotation.Infrastructure.Data;
