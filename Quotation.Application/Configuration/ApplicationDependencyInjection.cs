@@ -1,14 +1,14 @@
-﻿using Mapster;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using Mapster;
 using MapsterMapper;
 using Microsoft.Extensions.DependencyInjection;
 using Quotation.Application.Interface;
 using Quotation.Application.Services;
+using Quotation.Application.Validators;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Quotation.Application.Configuration
 {
@@ -16,9 +16,17 @@ namespace Quotation.Application.Configuration
     {
         public static IServiceCollection AddApplicationCore(this IServiceCollection services)
         {
+            //services.AddFluentValidation(opt =>
+            //{
+            //    opt.RegisterValidatorsFromAssemblyContaining(typeof(UnitModelValidator));
+            //});
+
+            services.AddFluentValidationAutoValidation();
+            services.AddFluentValidationClientsideAdapters();
+            services.AddValidatorsFromAssemblyContaining<UnitModelValidator>();
+
             services.AddSingleton(GetConfiguredMappingConfig());
             services.AddScoped<IMapper, ServiceMapper>();
-
             services.AddScoped<IUnitService, UnitService>();
             return services;
         }
