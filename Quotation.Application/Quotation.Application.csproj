@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Quotation.Domain\Quotation.Domain.csproj" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
     <PackageReference Include="Mapster.Core" Version="1.2.0" />
     <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0" />
 	<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
