@@ -18,5 +18,10 @@
                 <strong> Swagger </strong>
             </p>
         </li>
+        <li> 
+            <p>
+                <strong> FluentValidation </strong>
+            </p>
+        </li>
     </ul>
 </div>
