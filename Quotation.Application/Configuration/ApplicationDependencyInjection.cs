@@ -16,10 +16,6 @@ namespace Quotation.Application.Configuration
     {
         public static IServiceCollection AddApplicationCore(this IServiceCollection services)
         {
-            //services.AddFluentValidation(opt =>
-            //{
-            //    opt.RegisterValidatorsFromAssemblyContaining(typeof(UnitModelValidator));
-            //});
 
             services.AddFluentValidationAutoValidation();
             services.AddFluentValidationClientsideAdapters();
