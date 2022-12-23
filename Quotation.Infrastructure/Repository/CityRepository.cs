@@ -1,4 +1,4 @@
-﻿using Quotation.Application.Interface;
+﻿using Quotation.Application.Repositories.Interface;
 using Quotation.Domain.Entities;
 using Quotation.Infrastructure.Data;
 using Quotation.Infrastructure.Migrations;

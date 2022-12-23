@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quotation.Application.Interface
+namespace Quotation.Application.Repositories.Interface
 {
     public interface IUnitRepository
     {
