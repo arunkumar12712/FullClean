@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Quotation.Application.DTO;
-using Quotation.Application.Interface;
 using Quotation.Application.Services;
+using Quotation.Application.Services.Interfaces;
 using Quotation.Domain.Entities;
 using System.Net;
 
@@ -68,7 +68,7 @@ namespace Quotation.WebAPI.Controllers
             var result = _unitService.DeleteUnit(id);
             if (result)
             {
-                return new BadRequestObjectResult(new { Message = " Delete Successfully " });
+                return Ok("Delete Successfully ");
             }
             return NotFound();
         }

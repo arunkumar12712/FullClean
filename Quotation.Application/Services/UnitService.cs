@@ -1,6 +1,7 @@
 ﻿using MapsterMapper;
 using Quotation.Application.DTO;
 using Quotation.Application.Interface;
+using Quotation.Application.Services.Interfaces;
 using Quotation.Domain.Entities;
 using System;
 using System.Collections.Generic;

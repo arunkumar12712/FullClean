@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quotation.Application.Interface
+namespace Quotation.Application.Services.Interfaces
 {
     public interface IUnitService
     {
         List<UnitDTO> GetAllUnits();
         UnitDTO CreateUnit(UnitDTO unit);
         UnitDTO UpdateUnit(UnitDTO unit);
-        UnitDTO GetUnitById(int id);  
+        UnitDTO GetUnitById(int id);
         bool DeleteUnit(int id);
 
     }
