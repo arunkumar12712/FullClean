@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Quotation.Application.DTO;
+using Quotation.Application.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Quotation.Application.Validators
 {
-    public class UnitModelValidator : AbstractValidator<UnitDTO>
+    public class UnitModelValidator : AbstractValidator<UnitViewModel>
     {
         public UnitModelValidator()
         {

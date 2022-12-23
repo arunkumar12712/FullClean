@@ -1,4 +1,4 @@
-﻿using Quotation.Application.DTO;
+﻿using Quotation.Application.ViewModel;
 using Quotation.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,10 +10,10 @@ namespace Quotation.Application.Services.Interfaces
 {
     public interface IUnitService
     {
-        List<UnitDTO> GetAllUnits();
-        UnitDTO CreateUnit(UnitDTO unit);
-        UnitDTO UpdateUnit(UnitDTO unit);
-        UnitDTO GetUnitById(int id);
+        List<UnitViewModel> GetAllUnits();
+        UnitViewModel CreateUnit(UnitViewModel unit);
+        UnitViewModel UpdateUnit(UnitViewModel unit);
+        UnitViewModel GetUnitById(int id);
         bool DeleteUnit(int id);
 
     }

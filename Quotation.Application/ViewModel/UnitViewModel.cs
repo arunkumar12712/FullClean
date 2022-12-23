@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quotation.Application.DTO
+namespace Quotation.Application.ViewModel
 {
-    public class UnitDTO: BaseEntity, IRegister
+    public class UnitViewModel : BaseEntity, IRegister
     {
         public string Name { get; set; } = string.Empty;
 
         public void Register(TypeAdapterConfig config)
         {
-            config.NewConfig<Unit, UnitDTO>();
+            config.NewConfig<Unit, UnitViewModel>();
         }
     }
 }

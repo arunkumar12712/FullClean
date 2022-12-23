@@ -43,7 +43,7 @@ namespace Quotation.Infrastructure.Repository
             {
                 return result;
             }
-            return result = new City();
+            return new City();
         }
 
         public City UpdateUnit(City city)

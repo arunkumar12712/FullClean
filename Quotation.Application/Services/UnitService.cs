@@ -1,7 +1,7 @@
 ﻿using MapsterMapper;
-using Quotation.Application.DTO;
 using Quotation.Application.Repositories.Interface;
 using Quotation.Application.Services.Interfaces;
+using Quotation.Application.ViewModel;
 using Quotation.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -21,11 +21,11 @@ namespace Quotation.Application.Services
             _mapper = mapper;
         }
 
-        public UnitDTO CreateUnit(UnitDTO unit)
+        public UnitViewModel CreateUnit(UnitViewModel unit)
         {
             var result  = _mapper.Map<Unit>(unit);
             var response =_unitRepository.CreateUnit(result);
-            return _mapper.Map<UnitDTO>(response);
+            return _mapper.Map<UnitViewModel>(response);
         }
 
         public bool DeleteUnit(int id)
@@ -39,23 +39,23 @@ namespace Quotation.Application.Services
             return true;
         }
 
-        public List<UnitDTO> GetAllUnits()
+        public List<UnitViewModel> GetAllUnits()
         {
             var result = _unitRepository.GetAllUnits();
-            return _mapper.Map<List<UnitDTO>>(result);
+            return _mapper.Map<List<UnitViewModel>>(result);
         }
 
-        public UnitDTO GetUnitById(int id)
+        public UnitViewModel GetUnitById(int id)
         {
             var result =_unitRepository.GetUnitById(id);
-            return _mapper.Map<UnitDTO>(result);
+            return _mapper.Map<UnitViewModel>(result);
         }
 
-        public UnitDTO UpdateUnit(UnitDTO unit)
+        public UnitViewModel UpdateUnit(UnitViewModel unit)
         {
             var result = _mapper.Map<Unit>(unit);
             var response = _unitRepository.UpdateUnit(result);
-            return _mapper.Map<UnitDTO>(response);
+            return _mapper.Map<UnitViewModel>(response);
         }
     }
 }

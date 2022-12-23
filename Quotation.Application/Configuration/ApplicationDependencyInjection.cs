@@ -23,7 +23,9 @@ namespace Quotation.Application.Configuration
 
             services.AddSingleton(GetConfiguredMappingConfig());
             services.AddScoped<IMapper, ServiceMapper>();
+            // here register services
             services.AddScoped<IUnitService, UnitService>();
+            services.AddScoped<ICityService, CityService>();
             return services;
         }
 

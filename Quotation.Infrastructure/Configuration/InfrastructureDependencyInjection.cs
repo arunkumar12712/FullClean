@@ -17,7 +17,7 @@ namespace Quotation.Infrastructure.Configuration
                    b => b.MigrationsAssembly("Quotation.Infrastructure")));
 
             services.AddScoped<IUnitRepository, UnitRepository>();
-
+            services.AddScoped<ICityRepository, CityRepository>();
             return services;
         }
     }

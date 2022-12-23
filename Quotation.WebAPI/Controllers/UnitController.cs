@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Quotation.Application.DTO;
 using Quotation.Application.Services;
 using Quotation.Application.Services.Interfaces;
+using Quotation.Application.ViewModel;
 using Quotation.Domain.Entities;
 using System.Net;
 
@@ -28,7 +28,7 @@ namespace Quotation.WebAPI.Controllers
 
         [HttpPost]
         [Route("Create")]
-        public IActionResult PostUnit(UnitDTO request)
+        public IActionResult PostUnit(UnitViewModel request)
         {
             if (!ModelState.IsValid)
             {
@@ -40,7 +40,7 @@ namespace Quotation.WebAPI.Controllers
 
         [HttpPut]
         [Route("Update")]
-        public ActionResult<UnitDTO> PutUnit(UnitDTO request)
+        public ActionResult<UnitViewModel> PutUnit(UnitViewModel request)
         {
             if (!ModelState.IsValid)
             {
@@ -51,7 +51,7 @@ namespace Quotation.WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<UnitDTO> GetUnitById(int id) 
+        public ActionResult<UnitViewModel> GetUnitById(int id) 
         { 
             var result = _unitService.GetUnitById(id);
             if(result == null)

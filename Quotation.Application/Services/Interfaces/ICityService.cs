@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MapsterMapper;
+using Quotation.Application.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,6 @@ namespace Quotation.Application.Services.Interfaces
 {
     public interface ICityService
     {
-
+        CityViewModel Create(CityViewModel city);
     }
 }

@@ -48,7 +48,7 @@ namespace Quotation.Infrastructure.Repository
 
         public State UpdateUnit(State state)
         {
-            var result= _quotationDbContext.Update(state);
+            var result = _quotationDbContext.Update(state);
             _quotationDbContext.SaveChanges();
             return result.Entity;
         }
