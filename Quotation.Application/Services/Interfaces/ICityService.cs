@@ -10,6 +10,8 @@ namespace Quotation.Application.Services.Interfaces
 {
     public interface ICityService
     {
+        List<CityViewModel> GetAllCities();
         CityViewModel Create(CityViewModel city);
+
     }
 }

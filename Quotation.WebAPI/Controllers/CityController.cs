@@ -24,5 +24,12 @@ namespace Quotation.WebAPI.Controllers
             var response = _cityService.Create(city);
             return Ok(response);
         }
+
+        [HttpGet]
+        [Route("GetAll")]
+        public ActionResult<List<CityViewModel>> GetAll() 
+        {
+            return Ok(_cityService.GetAllCities());
+        }
     }
 }

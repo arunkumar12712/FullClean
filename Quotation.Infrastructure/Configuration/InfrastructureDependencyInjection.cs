@@ -18,6 +18,7 @@ namespace Quotation.Infrastructure.Configuration
 
             services.AddScoped<IUnitRepository, UnitRepository>();
             services.AddScoped<ICityRepository, CityRepository>();
+            services.AddScoped<IStateRepository, StateRepository>();
             return services;
         }
     }

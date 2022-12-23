@@ -18,25 +18,25 @@ namespace Quotation.Infrastructure.Repository
             _quotationDbContext = quotationDbContext;
         }
 
-        public State CreateUnit(State state)
+        public State CreateState(State state)
         {
             _quotationDbContext.Add(state);
             _quotationDbContext.SaveChanges();
             return state;
         }
 
-        public void DeleteUnitById(State state)
+        public void DeleteStateById(State state)
         {
             _quotationDbContext.Remove(state);
             _quotationDbContext.SaveChanges();  
         }
 
-        public List<State> GetAllUnits()
+        public List<State> GetAllStates()
         {
            return _quotationDbContext.States.ToList();
         }
 
-        public State GetUnitById(int id)
+        public State GetStateById(int id)
         {
             var results = _quotationDbContext.States.Where(t => t.Id == id).SingleOrDefault();
             if(results != null)
@@ -46,7 +46,7 @@ namespace Quotation.Infrastructure.Repository
             return new State();
         }
 
-        public State UpdateUnit(State state)
+        public State UpdateState(State state)
         {
             var result = _quotationDbContext.Update(state);
             _quotationDbContext.SaveChanges();

@@ -24,8 +24,14 @@ namespace Quotation.Application.Services
         public CityViewModel Create(CityViewModel city)
         {
             var result = _mapper.Map<City>(city);
-            var response = _cityRepository.CreateUnit(result);
+            var response = _cityRepository.CreateCity(result);
             return _mapper.Map<CityViewModel>(response);
+        }
+
+        public List<CityViewModel> GetAllCities()
+        {
+            var result =  _cityRepository.GetAllCities();
+            return _mapper.Map<List<CityViewModel>>(result); ;
         }
     }
 }

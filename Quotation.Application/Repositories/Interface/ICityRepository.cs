@@ -9,10 +9,10 @@ namespace Quotation.Application.Repositories.Interface
 {
     public interface ICityRepository
     {
-        List<City> GetAllUnits();
-        City CreateUnit(City city);
-        City UpdateUnit(City city);
-        City GetUnitById(int id);
-        void DeleteUnitById(City city);
+        List<City> GetAllCities();
+        City CreateCity(City city);
+        City UpdateCity(City city);
+        City GetCityById(int id);
+        void DeleteCityById(City city);
     }
 }

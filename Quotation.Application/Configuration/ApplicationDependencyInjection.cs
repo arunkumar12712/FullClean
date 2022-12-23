@@ -26,6 +26,7 @@ namespace Quotation.Application.Configuration
             // here register services
             services.AddScoped<IUnitService, UnitService>();
             services.AddScoped<ICityService, CityService>();
+            services.AddScoped<IStateService, StateService>();
             return services;
         }
 

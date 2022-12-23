@@ -9,10 +9,11 @@ namespace Quotation.Application.Repositories.Interface
 {
     public interface IStateRepository
     {
-        List<State> GetAllUnits();
-        State CreateUnit(State state);
-        State UpdateUnit(State state);
-        State GetUnitById(int id);
-        void DeleteUnitById(State state);
+        List<State> GetAllStates();
+        State CreateState(State state);
+        State UpdateState(State state);
+        State GetStateById(int id);
+        void DeleteStateById(State state);
     }
 }
+
