@@ -21,7 +21,7 @@ namespace Quotation.Infrastructure.Repository
 
         public Company CreateCompany(Company company)
         {
-            _quotationDbContext.Companys.Add(company);
+            _quotationDbContext.Company.Add(company);
             _quotationDbContext.SaveChanges();
             return company;
         }
@@ -33,7 +33,7 @@ namespace Quotation.Infrastructure.Repository
 
         public List<Company> GetAllCompanies()
         {
-            return _quotationDbContext.Companys.Include(i => i.State).Include(i => i.City).ToList();
+            return _quotationDbContext.Company.Include(i => i.State).Include(i => i.City).ToList();
         }
 
         public Company GetCompanyById(int id)

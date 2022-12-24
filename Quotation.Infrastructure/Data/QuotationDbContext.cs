@@ -15,7 +15,7 @@ namespace Quotation.Infrastructure.Data
         public DbSet<Unit> Units { get; set; }
         public DbSet<State> States { get; set; }
         public DbSet<City> Cities { get; set; }
-        public DbSet<Company> Companys { get; set; }
+        public DbSet<Company> Company { get; set; }
         public QuotationDbContext(DbContextOptions<QuotationDbContext> option) : base (option)
         {
 
