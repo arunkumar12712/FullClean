@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Quatation.WebAPI.Model;
 using Quotation.Application.ViewModel;
 using Quotation.Infrastructure.Identity;
 using System.Security.Claims;
