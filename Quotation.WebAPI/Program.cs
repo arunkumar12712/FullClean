@@ -1,12 +1,7 @@
-using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
+
 using Quotation.Application.Configuration;
-using Quotation.Application.Validators;
 using Quotation.Infrastructure.Configuration;
-using Quotation.Infrastructure.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,21 +9,6 @@ ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
 
 builder.Services.AddInfrastructure(builder.Configuration).AddApplicationCore();
-
-
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(
-    options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<QuotationDbContext>();
-
-
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
-    {
-        options.SlidingExpiration = true;
-        options.ExpireTimeSpan = new TimeSpan(0, 1, 0);
-    });
-
-
 
 
 builder.Services.AddControllers();

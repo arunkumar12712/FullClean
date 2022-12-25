@@ -1,7 +1,6 @@
 ﻿using Quotation.Application.Repositories.Interface;
 using Quotation.Domain.Entities;
 using Quotation.Infrastructure.Data;
-using Quotation.Infrastructure.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;

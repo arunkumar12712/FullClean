@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quotation.Infrastructure.Data;
 
@@ -10,9 +11,10 @@ using Quotation.Infrastructure.Data;
 namespace Quotation.Infrastructure.Migrations
 {
     [DbContext(typeof(QuotationDbContext))]
-    partial class QuotationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221224190310_intialcreate")]
+    partial class intialcreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ using Quotation.Domain.Entities;
 
 namespace Quotation.Infrastructure.Data
 {
-    public class QuotationDbContext : IdentityDbContext<IdentityUser>
+    public class QuotationDbContext : DbContext
     {
         public DbSet<Unit> Units { get; set; }
         public DbSet<State> States { get; set; }
